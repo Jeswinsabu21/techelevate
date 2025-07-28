@@ -1,0 +1,14 @@
+day 8
+
+Today, I successfully developed and tested a graphical user interface (GUI) for my Python-based firewall using Tkinter.
+ The goal was to make the firewall more interactive and user-friendly by displaying live traffic, toggling firewall rules, and viewing logs.
+Tasks Completed:
+    Developed a Tkinter-based GUI for the personal firewall project.
+    Implemented a Live Packet Viewer using Treeview to display time, source IP, destination IP, and protocol.
+    Created a Firewall Rules section with checkboxes to enable/disable:
+        Block ICMP
+        Block TCP port 80
+    Added an Apply Rules button to reflect rule status in the log.
+    Integrated a Log Viewer using ScrolledText to show blocked packets and rule activity.
+    Used Scapy to sniff network packets and apply filtering logic based on selected rules.
+    Utilized after() method with threading to periodically update packet capture without freezing the GUI.
