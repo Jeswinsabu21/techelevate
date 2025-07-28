@@ -1,0 +1,26 @@
+Day 4-5
+ — Rule Engine Development and Packet Filtering
+Overview
+During Day 2 of my internship, I focused on building the core component of a Python-based firewall — a rule engine that captures network packets and decides whether to allow or block them based on defined rules.
+What I Did
+    Packet Capture Using Scapy
+    I used the powerful Python library Scapy to sniff live network packets on the machine. This allows the firewall to monitor real-time traffic and analyze each packet's properties such as IP address, port number, and protocol.
+    Loading Firewall Rules From JSON
+    To make the firewall flexible and easy to configure, I designed it to read filtering rules from an external JSON file (rule.json). Each rule specifies:
+        The IP address or subnet to match.
+        The destination or source port number.
+        The protocol type (e.g., TCP).
+        The action to take (allow or block).
+    Rule Matching Logic
+    For each captured packet, the firewall compares the packet details against the loaded rules:
+        If the packet matches a rule with block action, it is marked as blocked.
+        Otherwise, it is allowed.
+        This comparison includes exact IP matching and subnet matching (CIDR notation support).
+    Real-Time Decision Output
+    The firewall prints live results in the console indicating whether a packet is allowed or blocked, along with the packet’s IP, port, and protocol details. This immediate feedback helps in monitoring and debugging.
+    (allowed and blocked) screenshot provided
+Key Learnings
+    How to use Scapy for packet sniffing and inspecting network layers.
+    Reading and parsing JSON files in Python to drive program behavior
+    Implementing subnet-based IP matching using Python's ipaddress module.
+    Building a simple yet effective rule engine for packet filtering.
