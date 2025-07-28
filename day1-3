@@ -1,0 +1,8 @@
+project: to create a python based firewal
+
+day1-3:
+learned the basic concepts about networking downloaded the virtual box to use kali linux for better convenience
+downloaded scapy and python3 was inbuilt within the kali itself
+
+builded a basic network sniffing program using python (sniffer.py) to capture the packets along with parsing and headers, as well as prints source ip,destination ip,protocol and ports.
+screenshot provided in the folder(sniffer.py1 and sniffer.py2)
