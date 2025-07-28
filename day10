@@ -1,0 +1,27 @@
+Python Firewall with GUI
+This project is a basic Python-based firewall built using Scapy and Tkinter. It allows real-time packet monitoring, customizable rule-based filtering, and a user-friendly GUI.
+📦 Features
+    Live Packet Monitoring (via scapy.sniff)
+    Rule-based Filtering (IP, ports, protocols)
+    Graphical User Interface (Tkinter-based)
+    Logging & Alerts
+    Safe Shutdown & Error Handling
+requirements
+    Python 3.7+
+    Modules:
+        scapy
+        tkinter (comes with Python)
+        threading
+bash code:pip install scapy
+
+day 8 contains the firewall.py python code the GUI will launch and display live packets. You can apply filtering rules from the rule file or via input fields.
+
+| Test                  | Tool Used | Rule Used          | Expected Output | Observed |
+| --------------------- | --------- | ------------------ | --------------- | -------- |
+| Ping 127.0.0.1        | `ping`    | No ICMP rules      | Default allow   | ✅        |
+| Curl to 10.0.2.15:443 | `curl`    | Block rule         | Packet blocked  | ✅        |
+| Curl to google.com:80 | `curl`    | Allow port 80      | Packet allowed  | ✅        |
+| nmap to 10.0.2.15     | `nmap`    | Block IP 10.0.2.15 | TCP/443 blocked | ✅        |
+
+
+screenshot of the gui provided in day 9 screenshots
