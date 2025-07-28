@@ -1,0 +1,36 @@
+day 6
+goal was to implement a logging system for the Python-based firewall. The idea was to track important events — such as which rules were triggered and whether an action was taken to allow or block network traffic — and record them with timestamps in a log file. Additionally, I explored how to improve the user experience by adding color-coded output in the terminal.
+What i learned 
+-python logging module 
+-file logging
+-terminal output with colours
+
+I implemented:
+A logging system that records:
+    The timestamp
+    The rule triggered (e.g., an IP match)
+    The action taken (Allowed or Blocked)
+A function to handle and format these logs
+Optional terminal output that visually highlights the action taken
+
+code.py is the main python folder and firewall.log is the log file that stores the output
+
+day 7
+Basics of iptables:
+    How Linux manages traffic using chains (INPUT, OUTPUT, FORWARD)
+    How to create rules using commands like iptables -A INPUT -s <ip> -j DROP
+Python’s subprocess module:
+    How to safely run system commands from Python scripts
+    How to pass arguments to shell commands programmatically
+What I Implemented:
+    Created Python functions to:
+        Block an IP by adding a DROP rule to the INPUT chain
+        Unblock an IP by removing the rule
+    Integrated these actions into the existing firewall logic
+    Maintained full logging support from Day 5:
+        Timestamped log entries
+        Descriptions of the rule applied and action taken
+
+firewall.py: Contains all logic for adding/removing iptables rules and logging
+verified the rule was successfully applied using : sudo iptables -L
+
